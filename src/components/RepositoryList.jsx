@@ -1,3 +1,10 @@
+import { RepositoryItem } from "./RepositoryItem";
+
+const repository = {
+  name: 'movieql',
+  description: 'Movie API using GraphQL',
+  link: 'https://github.com/EdsonLuiz/movieql'
+}
 
 export function RepositoryList() {
   return (
@@ -5,11 +12,9 @@ export function RepositoryList() {
       <h1>Lista de repositorios</h1>
 
       <ul>
-        <li>
-          <strong>Unform</strong>
-          <p>Forms in react</p>
-          <a href="">Acessa repositório</a>
-        </li>
+        <RepositoryItem repository={repository} />
+        <RepositoryItem repository={repository} />
+        <RepositoryItem repository={repository} />
       </ul>
 
     </section>
