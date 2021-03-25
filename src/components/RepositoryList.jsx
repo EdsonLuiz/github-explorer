@@ -1,5 +1,7 @@
 import { RepositoryItem } from "./RepositoryItem";
 
+import '../styles/repositories.scss'
+
 const repository = {
   name: 'movieql',
   description: 'Movie API using GraphQL',
