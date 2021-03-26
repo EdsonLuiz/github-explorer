@@ -4,17 +4,19 @@ import { RepositoryItem } from "./RepositoryItem";
 
 import '../styles/repositories.scss'
 
-const repository = {
-  name: 'movieql',
-  description: 'Movie API using GraphQL',
-  link: 'https://github.com/EdsonLuiz/movieql'
+interface Repository {
+  id: number
+  name: String,
+  description: String,
+  html_url: string
 }
 
 const API_URL = 'https://api.github.com/users/edsonluiz/repos'
 
+
 export function RepositoryList() {
 
-  const [repositories, setRepositories] = useState([])
+  const [repositories, setRepositories] = useState<Repository[]>([])
 
   useEffect(() => {
     fetch(API_URL)
